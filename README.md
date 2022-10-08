@@ -7,7 +7,7 @@
 - `clone https://github.com/pk70/it-grow-task.git`
 - `inside folder run composer install`
 - `duplicate the .env.example and rename it to .env`
-- `inside .env file put your database credentials then add 'CHARSET=utf8' 'COLLATION=utf8_general_ci'`
+- `inside .env file put your database credentials then add CHARSET=utf8 COLLATION=utf8_general_ci`
 - `run php artisan key:generate`
 - `run php artisan migrate`
 - `run npm install`
