@@ -9,6 +9,7 @@
 - `duplicate .env.example and rename it .env`
 - `inside .env file put your database credentials then add 'CHARSET=utf8' 'COLLATION=utf8_general_ci'`
 - `run php artisan key:generate`
+- `run php artisan migrate`
 - `run npm install`
 - `run npm run build`
 - `run php artisan serve`
