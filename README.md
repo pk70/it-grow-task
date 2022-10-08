@@ -17,6 +17,7 @@
 # api endpoints with query string parameter
 - `GET http://127.0.0.1:8000/api/currency_info/AUD?apikey=L3fH5A7`
 - `here AUD is for currency code`
+- `api documentation https://documenter.getpostman.com/view/17228695/2s83zguQDE`
 
 # Uses instructions
 - `If you want to use in your localhost then hit the link in browser http://127.0.0.1:8000`
