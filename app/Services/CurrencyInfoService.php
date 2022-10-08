@@ -11,7 +11,7 @@ class CurrencyInfoService
 {
 
     private $url="https://www.cbr.ru/scripts/XML_daily.asp?date_req=02/09/2002";
-    private $currencyCollection;
+
     /**
      * Display a listing of the resource.
      *
@@ -32,8 +32,6 @@ class CurrencyInfoService
         } catch (\Throwable $th) {
             throw $th;
         }
-
-
     }
 
     /**
@@ -62,12 +60,9 @@ class CurrencyInfoService
             }
             return true;
         } catch (\Throwable $th) {
-            return throw $th;
+            return $th->getMessage();
         }
-
-
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -78,7 +73,7 @@ class CurrencyInfoService
     public function updateWithRedirect(string $redirectRoute)
     {
         $this->create($this->getCurrencyInfoByUrl($this->url));
-        return redirect()->route($redirectRoute)->with(['message'=>'successfully syncronized with latest data']);
+        return redirect()->route($redirectRoute)->with(['message'=>'successfully synchronized with latest data']);
     }
 
 

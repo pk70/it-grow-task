@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\CurrencyInformation;
 use App\Services\CurrencyInfoService;
 class HomeController extends Controller
@@ -29,9 +28,19 @@ class HomeController extends Controller
         return view('dashboard')->with(['data'=>$data]);
     }
 
+    /**
+     * Show the currency data.
+     *
+     */
+
     public function getCurrencyData(){
         return CurrencyInformation::simplePaginate(5);
     }
+
+    /**
+     * Update the currency data from CurrencyInfoService service.
+     *
+     */
 
     public function updateCurrencyData(){
         $currencyInfoService=new CurrencyInfoService();

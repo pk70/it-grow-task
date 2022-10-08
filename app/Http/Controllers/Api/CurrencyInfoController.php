@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\ApiLog;
 use Illuminate\Http\Request;
 use App\Models\CurrencyInformation;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CurrencyInfoCollection;
-use Carbon\Carbon;
 
 class CurrencyInfoController extends Controller
 {
@@ -45,13 +43,12 @@ class CurrencyInfoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $code
+     * @param  string  $code
      * @return \Illuminate\Http\Response
      */
     public function show(string $code)
     {
         try {
-
             $result= new CurrencyInfoCollection(CurrencyInformation::where('char_code',$code)->get());
             return response([
                 'status' => 'success',
