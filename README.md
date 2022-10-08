@@ -21,8 +21,10 @@
 - `If you want to use in your localhost then hit the link in browser http://127.0.0.1:8000`
 - `For first time create an account or login`
 
+# Live url
+- `http://itgrow.discovernanosoft.com`
 
-Example api response with a currency code AUD:  
+# Example api response with a currency code AUD:  
 `    {
   "status": "success",
   "description": "successfully done",
