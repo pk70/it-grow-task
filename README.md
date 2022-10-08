@@ -1,6 +1,4 @@
-# task-requirements
-
-# requirements
+# Task requirements
 1. [x] PHP 8.1 minimum.
 2. [x] Composer.
 3. [x] NodeJs minimum v16
